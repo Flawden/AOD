@@ -1,0 +1,710 @@
+@import "nullstyle.scss";
+@import "slider.scss";
+@import "header.scss";
+@import "footer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+// Обнуляющий стиль
+
+
+
+// ===========================
+
+
+// Картинку в фон - начало
+
+.ibg{
+
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+img {display: none;}
+
+}
+
+// Картинку в фон - конец
+
+
+// ===========================
+
+
+// Переменные - начало
+
+$fontFamily: "Lato";
+
+// Переменные - конец
+
+
+// ===========================
+
+
+// Модификаторы - начало
+
+
+
+// Модификаторы - конец
+
+
+// ===========================
+
+ 
+// Общие стили - начало
+
+body {
+	font-family: $fontFamily;
+}
+
+.wrapper {
+
+	overflow: hidden;
+	min-height: 100%;
+
+}
+
+
+.container {
+
+	max-width: 1160px;
+
+	padding: 0 30px;
+	margin: 0 auto;
+
+}
+
+// Блок текста - начало
+
+.block {
+
+	text-align: center;
+
+	&__icon {
+
+		margin-bottom: 33px;
+
+	}
+
+	&__title {
+
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3.6px;
+
+		line-height: 24px;
+
+		margin-bottom: 20px;
+
+	}
+
+	&__text {
+
+		color: #848798;
+		font-size: 18px;
+		line-height: 34px;
+
+		&_j {
+
+			text-align: justify;
+
+			&:after {
+
+				content: '';
+
+				display: block;
+
+				margin: 0 auto;
+
+				width: 50px;
+				height: 1px;
+
+				margin-top: 45px;
+
+				background: #ebebeb;
+
+			}
+
+		}
+
+	}
+
+}
+
+// Блок текста - конец
+
+// Общие стили - конец
+
+
+// ===========================
+
+
+// Первый блок - начало
+
+.page {
+
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+}
+
+.main-screen {
+
+	flex: 1 0 100%;
+
+	&__bg {
+
+		position: absolute;
+
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+	}
+
+}
+
+
+// Первый блок - конец
+
+
+// ===========================
+
+
+// Второй блок - начало
+
+.generation__block {
+
+	margin: 120px 0;
+
+	@media(max-width: 900px) {
+
+	margin: 80px 0;
+
+	}
+
+	@media(max-width: 600px) {
+
+	margin: 30px 0;
+
+	}
+
+}
+
+
+// Второй блок - конец
+
+
+// ===========================
+
+
+// Третий блок - начало
+
+.brands {
+
+	&_rev {
+
+		.brands__column {
+
+			order: 1;
+
+			&_b {
+
+				order: 2;
+
+			}
+
+		}
+
+	}
+
+	&__row {
+
+		display: flex;
+
+		@media (max-width: 1100px) {
+
+			flex-direction: column;
+
+		}
+
+	}
+
+	&__column {
+
+		flex: 0 1 33.333%;
+
+		&_b {
+
+			flex: 0 1 66.666%;
+
+		}
+
+	}
+
+	&__item {
+
+
+	}
+
+	&__content {
+
+		padding: 70px 65px 55px 65px;
+
+		position: relative;
+
+		&:after {
+
+			content: '';
+
+			position: absolute;
+
+			bottom: -10px;
+			left: 50%;
+
+			margin-left: -10px;
+
+			width: 0;
+			height: 0;
+
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #000;
+
+		}
+
+		@media (max-width: 1500px) {
+
+			padding: 70px 35px 55px 35px;
+
+		}
+
+	}
+
+	&__image {
+
+		padding: 0 0 37.51% 0;
+
+	}
+
+
+}
+
+.item {
+
+	display: block;
+	position: relative;
+
+	height: 100%;
+
+	&__image {
+
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+
+		top: 0;
+		left: 0;
+
+
+	}
+
+	@media (max-width: 1100px) {
+
+			height: auto;
+			padding: 0px 0px 70% 0px;
+
+		}
+
+	&__logo {
+
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+
+		flex-direction: column;
+
+		align-items: center;
+		justify-content: center;
+
+		z-index: 2;
+
+		opacity: 0;
+		visibility: hidden;
+
+		span {
+
+			color: #fff;
+			padding-top: 14px;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 2.8px;
+
+		}
+
+	}
+
+		&:hover {
+
+			.item__logo {
+
+			opacity: 1;
+			visibility: visible;
+			background: rgba(99, 172, 147, 0.5);
+			transition-duration: 0.6s;
+
+			}
+
+		}
+
+
+}
+
+
+
+// Третий блок - конец
+
+
+// ===========================
+
+
+// Слайдер блок - начало
+
+.slider {
+
+	background: #f7f7f7;
+	padding: 120px 0;
+
+	@media(max-width: 900px) {
+
+	padding: 80px 0;
+
+	}
+
+	@media(max-width: 600px) {
+
+	padding: 30px 0;
+
+	}
+
+	&__body {}
+	&__item {
+
+		text-align: center;
+
+	}
+
+	&__icon {
+
+		margin-bottom: 35px;
+
+	}
+
+	&__title {
+
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-weight: 700;
+		color: #353738;
+
+		span {
+
+			font-weight: 300;
+			color: #848789;
+
+		}
+
+
+	}
+
+	&__text {
+
+		text-align: center;
+		color: #848789;
+		font-size: 24px;
+		font-style: italic;
+		line-height: 34px;
+
+	}
+
+}
+
+
+
+// Слайдер блок - конец
+
+
+// ===========================
+
+
+// Shop блок - начало
+
+.shop {
+
+	&__body {
+
+		display: flex;
+
+	}
+
+	&__column {
+
+		flex: 0 1 16.666%;
+
+		&_b {
+
+			flex: 0 1 33.333%;
+
+		}
+
+	}
+
+	&__block {}
+
+	&__footer {
+
+		display: flex;
+		text-align: center;
+
+		background: #282f35;
+		padding: 75px 0;
+
+	}
+	&__btn {
+
+		display: inline-block;
+		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		line-height: 48px;
+		letter-spacing: 2.8px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		padding: 0px 58px;
+
+		&:hover {
+
+			background: rgba(255, 255, 255, 0.5);
+
+		}
+
+	}
+
+	@media (max-width: 1100px) {
+
+		&__body {
+
+		flex-wrap: wrap;
+
+		}
+
+		&__column {
+
+		flex: 0 1 50%;
+
+			&:first-child, &:last-child {
+
+				flex: 0 1 100%;
+
+			}
+
+		}
+
+	}
+
+
+
+
+}
+
+.block-shop {
+
+	height: 100%;
+
+	&__row {
+
+		display: flex;
+
+	}
+	&__column {
+
+		flex: 0 1 50%;
+
+	}
+	&__item {
+
+		height: auto;
+		padding: 0 0 50% 0;
+
+		&_b {
+
+			padding: 0 0 200.5% 0;
+
+		}
+
+		&_l {
+
+			padding: 0 0 100% 0;
+
+		}
+
+	}
+
+}
+
+// Shop блок - конец
+
+
+// ===========================
+
+
+// Form блок - начало
+
+.subscribe {
+
+
+
+	&__body {	
+
+		background: #fff;
+		text-align: center;
+
+		padding: 110px 0;
+
+		max-width: 534px;
+		margin: 0 auto;
+
+		@media(max-width: 900px) {
+
+		padding: 80px 0;
+
+		}
+
+		@media(max-width: 600px) {
+
+		padding: 30px 0;
+
+		}
+
+	}
+
+	&__logo {
+
+		padding-bottom: 39px;
+
+	}
+
+	&__label {
+
+		padding-bottom: 35px;
+
+		color: #848789;
+		font-size: 24px;
+		font-style: italic;
+
+	}
+
+	&__form {
+
+		display: flex;
+
+		@media(max-width: 600px) {
+
+		display: block;
+
+		}
+
+	}
+
+	&__input {
+
+		flex: 1 1 auto;
+
+		.input {
+
+			width: 100%;
+			height: 69px;
+			border: 1px solid #d3d7d9;
+			background: #fff;
+
+			color: #929292;
+			font-size: 20px;
+			font-style: italic;
+
+			padding: 0 27px;
+
+			&:focus {
+
+				border: 1px solid #64c29e;
+
+			}
+
+		}
+
+	}
+
+	&__button {
+
+		flex: 0 0 126px;
+
+	}
+
+	&__btn {
+
+		width: 126px;
+		height: 69px;
+		background: #64c29e;
+
+		color: #fff;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 300;
+
+		margin-left: 8px;
+
+		@media(max-width: 600px) {
+
+		margin-top: 20px;
+		width: 100%;
+		margin-left: 0px;
+
+		}
+
+		&:hover {
+
+			background: #62bc9a;
+
+		}
+
+		&:active {
+
+			background: #57a688;
+
+		}
+
+	}
+
+}
+
+
+
+// Form блок - конец
+
+
+// ===========================
